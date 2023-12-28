@@ -22,7 +22,6 @@ jobs:
         cache-dependency-path: subdir/go.sum
     - name: Install dependencies
       run: |
-        go get .
         go get k8s.io/client-go@kubernetes
         go get k8s.io/client-go/tools/clientcmd
     - name: Build
