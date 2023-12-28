@@ -26,8 +26,9 @@ jobs:
         go get k8s.io/client-go@kubernetes-1.29.0
         go get k8s.io/client-go/tools/clientcmd
         go get k8s.io/client-go/openapi@v0.29.0
+        go mod tidy
     - name: Build
-      run: go build -v ./...
+      run: go build main.go
 
     - name: Test
       run: go test -v ./...
