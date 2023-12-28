@@ -23,8 +23,9 @@ jobs:
     - name: Install dependencies
       run: |
         go mod init main
-        go get k8s.io/client-go@kubernetes
+        go get k8s.io/client-go@kubernetes-1.29.0
         go get k8s.io/client-go/tools/clientcmd
+        go get k8s.io/client-go/openapi@v0.29.0
     - name: Build
       run: go build -v ./...
 
